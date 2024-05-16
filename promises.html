@@ -1,0 +1,163 @@
+<body>
+
+
+
+</body>
+
+<script>
+
+//Example 1
+
+
+// let num = 1;
+
+// const p1 = new Promise(function(res, rej){
+// if (num ==1){
+//     res("sucessfull")
+// }else{
+//     rej("error");
+// }
+
+
+// });
+// console.log(p1);
+// p1 => then , catch | resolve ? then : catch
+
+//using the promises
+
+// p1.then(function(res){
+//     //resolve
+//     console.log(res);
+// }).catch(function(rej){
+//     //reject
+//     console.log(rej)
+// });
+
+// console.log("hello");
+
+
+// Example 1 end //
+
+
+// Example 2 //
+
+// rain coming example
+
+// const willrain = true;
+
+// const checkrain = new Promise(function(res, rej){
+// if(willrain){
+//     res("rain is coming");
+// }else{
+//     rej("rain is not coming");
+// }
+
+// });
+
+// // checkrain
+
+// checkrain.then(function(data){
+//     console.log(data);
+// }).catch(function(err){
+//     console.log(err);
+// })
+
+
+// Example-2 End
+
+// example 3 //
+// Even and odd number find
+
+// let num = 0;
+
+// const abc = new Promise(function(res,rej){
+//     for(let i=0; i<10; i++){
+//         if(i%2 == 0){
+//             num++;
+//             console.log(num);
+//           res("this is even number");
+//         }else{
+//             return rej("this is odd number")
+//         }
+//     }
+// })
+
+
+// abc.then(function(data){
+//     console.log(data);
+// }).catch(function(err){
+//     console.log(err);
+// })
+
+
+// Example 3 End //
+
+
+// Example 4 //
+
+// find odd Number
+
+// const num = 200;
+
+// const abc = new Promise(function(res, rej){
+//     if(num%2 == 0){
+//         res("this is even number");
+//     }else{
+//         return rej("this is odd number");
+//     }
+// });
+
+
+// // promises define //
+
+// abc.then(function(data){
+//     console.log(data);
+// }).catch(function(err){
+//     console.log(err);
+// })
+
+
+// example 4 end 
+
+const fruits = ["Apple","orange","mango"];
+let resolve = "";
+
+function Arrval(val){
+    return new Promise(function(res,rej){
+        if(val!==undefined && val!==null){
+            res(val);
+        }else{
+            rej("value is not present")
+        }
+    })
+}
+
+// Promise aplied
+// console.log(fruits);
+
+for(let i = 0; i<fruits.length; i++){
+    Arrval(fruits[i])
+    .then(function(data){
+        console.log(data)
+    })
+    .catch(function(err){
+        console.log(err);
+    })
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
